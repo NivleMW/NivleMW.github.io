@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: lightcyan;
+    scroll-behavior: smooth;
+    font-family: Arial;
+}
+
+#nav {
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#nav a{
+    float: left;
+    color: aqua;
+    text-align: center;
+    padding: 10px 0px;
+    text-decoration:none;
+    font-size: 20px;
+    width: 25%;
+}
+
+#nav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+#nav a.active {
+    background-color: aqua;
+    color: black;
+}
+
+
+#Home{
+    height:30%;
+    position:relative;
+}
+
+#HomeImg {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("Pics/.png");
+    filter: blur(6px);
+
+    height:100%;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    position:relative;
+}
+
+#Contact{
+    height:100%;
+    position:relative;
+}
+
+
+/*General Stuff below*/
+section {
+    padding-top: 45px;
+}
+
+.centerText{
+    text-align:center;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:black;
+}
+
+
+h1 {
+    font-size: 60px;
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    color: darkblue;
+    /*text-align: center;*/
+}
+
+h3 {
+    color: navy;
+    /*text-align: justify;*/
+}
+
+td, th{
+    border: 1px solid black;
+}
+
+.prev,
+.next{
+    cursor:pointer;
+    position:absolute;
+    top:40%;
+    width:auto;
+    padding:16px;
+    color:black;
+    font-size:20px;
+    border-radius:0 3px 3px 0;
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+.next{
+    right:0;
+    border-radius:3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover{
+    background-color:rgba(0,0,0,0.8);
+}
+
+.row::after{
+    content:"";
+    clear: both;
+    display:table;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+@media screen @ (maxwidth: 1000px){
+    .column{
+        width: 100%;
+        text-align: center;
+    }
+    img{
+        margin: auto;
+    }
+}
+
+.slides{
+    display:none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
