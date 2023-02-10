@@ -136,7 +136,7 @@ td, th{
     padding: 20px;
 }
 
-@media screen @ (maxwidth: 1000px){
+@media screen (maxwidth: 1000px){
     .column{
         width: 100%;
         text-align: center;

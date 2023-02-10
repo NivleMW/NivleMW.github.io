@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rainne's Portfolio</title>
+    <link rel="stylesheet" href="MainStylesheet.css" />
+</head>
+<body>
+
+    <div id="topImg">
+        <div id="lm">
+            <h1 id="topH">Rainne / Melvin</h1>
+            <div>
+                <span class="profileDescriptor">SG</span>
+                <span class="profileDescriptor">Programmer:4yr</span>
+                <span class="profileDescriptor">He/She/They</span>
+            </div>
+
+            <div id="nav">
+                <!--<div onclick="navBarClick(this)" onmouseover="hover(this)" onmouseleave="hover(this)">
+                    <div id="navBar1"></div>
+                    <div id="navBar2"></div>
+                    <div id="navBar3"></div>
+                </div>-->
+                <div id="navBarLeft">
+                    <a href="Index.html" class="navBarContent" onmouseover="hover(this)" onmouseleave="hover(this)">Home</a>
+                    <a href="History.html" class="navBarContent" onmouseover="hover(this)" onmouseleave="hover(this)">History</a>
+                    <a class="navBarContent activeNav" onmouseover="hover(this)" onmouseleave="hover(this)">Portfolio</a>
+                </div>
+                <div id="navBarRight">
+                    <a href="https://ra-ivl.itch.io/"><img src="Pics/Itchio_ico.png" /></a>
+                    <a href="https://www.linkedin.com/in/melvin-won-35289b1ab/"><img src="Pics/Linkedin_ico.png" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="navBarBuffer"></div>
+
+    <div id="portfolio">
+        <div class="homeContent">
+            <div style="position:relative;">
+                <!--<a class="prev" onclick="ShowSlides(0,-1)">&#10094</a>
+                <a class="next" onclick="ShowSlides(0,1)">&#10095</a>-->
+                <div class="row">
+                    <div class="column">
+                        <div class="slidesContainer">
+                            <div class="slides" style="display:block;">
+                                <img src="Pics/GJWowie4_0-Cacti-Logo.png" style="width:100%" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column" style="text-align:center;">
+                        <h2>Wowie Game Jam 4.0 - Abominable Cacti</h2>
+                        <p>
+                            Took part in Game Jam with 4 others to develop a game using Unity.<br />
+                            Acheived Top 30%.<br />
+                            Game can be found in <a href="https://jiririn.itch.io/abominable-cacti">Itch.io</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="homeContent">
+            <div style="position:relative;">
+                <!--<a class="prev" onclick="ShowSlides(1,-1)">&#10094</a>
+                <a class="next" onclick="ShowSlides(1,1)">&#10095</a>-->
+                <div class="row">
+                    <div class="column">
+                        <div class="slidesContainer">
+                            <div class="slides" style="display:block;">
+                                <img src="Pics/GJ108-CA4-Logo.png" style="width:100%" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column" style="text-align:center;">
+                        <h2>Mini Jam 108 - Crab Arena 4</h2>
+                        <p>
+                            Worked in a pair to develop a game for the Game Jam using Unity.<br />
+                            Acheived Top 10%.<br />
+                            Game can be found in <a href="https://jiririn.itch.io/crab-arena-4">Itch.io</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="homeContent">
+            <div style="position:relative;">
+                <a class="prev" onclick="ShowSlides(2,-1)">&#10094</a>
+                <a class="next" onclick="ShowSlides(2,1)">&#10095</a>
+                <div class="row">
+                    <div class="column">
+                        <div class="slidesContainer">
+                            <div class="slides" style="display:block;">
+                                <img src="Pics/Y2S2-Logo.jpg" style="width:100%" />
+                            </div>
+                            <div class="slides">
+                                <img src="Pics/Y2S2-SP1.jpg" style="width:100%" />
+                            </div>
+                            <div class="slides">
+                                <img src="Pics/Y2S2-SP2.jpg" style="width:100%" />
+                            </div>
+                            <div class="slides">
+                                <img src="Pics/Y2S2-SP3.jpg" style="width:100%" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column" style="text-align:center;">
+                        <h2>Studio Project 3 - Lonin</h2>
+                        <p>
+                            Worked in a pair during NYP to develop a game in 2 weeks for Studio Project.<br/>
+                            The Game was made using OpenGL and C++.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="MainJS.js"></script>
+</body>
+</html>
+
