@@ -61,6 +61,9 @@ body {
     max-height: 100%;
     width: auto;
 }
+#navBarRight > a > img.hover {
+    background-color: lightcyan;
+}
 
 .navBarContent {
     width: 100px;
@@ -95,8 +98,8 @@ body {
     background-color: lightcyan;
 }
 
-.hover {
-    color: dimgray;
+.navBarContent.hover {
+    color: white;
 }
 
 #navBarBuffer{
@@ -170,39 +173,70 @@ body {
     margin: 0px 40px;
 }
 #historyYears {
+    font-size: 1.25em;
     border-bottom: 1px solid rgba(100,100,100,0.5);
     margin-bottom: 15px;
     display: flex;
     justify-content: space-around;
+    align-content:stretch;
 
 }
-#historyYears > div {
+#historyYears > div{
+    user-select: none;
+    -webkit-user-select: none;
+
+    color:gray;
     position: relative;
-    top: 10px;
+    top: 12px;
+}
+#historyYears > a {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+
+    position: relative;
+    top: 12px;
+}
+#historyYears > a.hover {
+    font-weight: bold;
+}
+#historyYears > a.historySelected{
+    color: lightseagreen;
+    background-color: lightcyan;
+    font-weight: bold;
 }
 
-#historyEvents {
-    display: flex;
-    justify-content: space-around;
+
+#historyEvents div {
+    margin-left: calc((var(--tooltip-startYear) - 2018 + 0.5) * 100% / 6);
+    width: calc((var(--tooltip-endYear) - var(--tooltip-startYear)) * 100% / 6);
+    white-space: nowrap;
+    height: 30px;
 }
 
-.circle { /*a:link a:visited a:hover a:active text-decoration:none*/
-    aspect-ratio: 1 / 1;
-    width: 20px;
-    background-color: white;
-    border-radius: 50%;
+#historyEvents div:before{
+    background-color: var(--tooltip-color);
+    position: relative;
+    left: 0px;
+    bottom: -27px;
+    height: 8px;
+    border-radius: 8px;
+    content:"";
+    display: block;
 }
 
-#historyEventsContent {
-
+#historyEventsContent div {
+    display:none;
+}
+#historyEventsContent > div.historySelected{
+    display:block;
 }
 
 /*#endregion History*/
-
 /*#region Portfolio*/
-#portfolio {
-    margin: 0px 40px;
-}
+    #portfolio {
+        margin: 0px 40px;
+    }
 
 /*#region Slides*/
 .prev,
@@ -224,10 +258,10 @@ body {
     border-radius: 3px 0 0 3px;
 }
 
-    .prev:hover,
-    .next:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
+.prev:hover,
+.next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
 
 .row::after {
     content: "";
