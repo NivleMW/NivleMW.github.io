@@ -74,6 +74,9 @@ body {
     align-items: center;
     color: black;
     text-decoration: none;
+    font-size: 1.1em;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 #navBar1, #navBar2, #navBar3{
@@ -172,6 +175,13 @@ body {
 #history {
     margin: 0px 40px;
 }
+#historyTimeline{
+    background-color: lightgray;
+    padding-bottom: 15px;
+    border-style: double;
+    border-color: black;
+}
+
 #historyYears {
     font-size: 1.25em;
     border-bottom: 1px solid rgba(100,100,100,0.5);
@@ -185,7 +195,7 @@ body {
     user-select: none;
     -webkit-user-select: none;
 
-    color:gray;
+    color: dimgray;
     position: relative;
     top: 12px;
 }
@@ -202,12 +212,14 @@ body {
 }
 #historyYears > a.historySelected{
     color: lightseagreen;
-    background-color: lightcyan;
     font-weight: bold;
 }
 
-
 #historyEvents div {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+
     margin-left: calc((var(--tooltip-startYear) - 2018 + 0.5) * 100% / 6);
     width: calc((var(--tooltip-endYear) - var(--tooltip-startYear)) * 100% / 6);
     white-space: nowrap;
@@ -225,10 +237,30 @@ body {
     display: block;
 }
 
-#historyEventsContent div {
-    display:none;
+#historyEvents div.hover{
+    font-weight: bold;
 }
-#historyEventsContent > div.historySelected{
+
+#historyEvents div.historySelected{
+    color: lightseagreen;
+    font-weight: bold;
+}
+
+#historyEventsContent{
+    margin-top: 20px;
+}
+
+#historyEventsContent section {
+    display:none;
+    list-style-position: inside;
+}
+#historyEventsContent li{
+    margin: 2px 0px;
+}
+#historyEventsContent .subCategory{
+    margin-left:40px;
+}
+#historyEventsContent > section.historySelected{
     display:block;
 }
 

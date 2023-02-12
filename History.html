@@ -37,7 +37,8 @@
     <div id="navBarBuffer"></div>
 
     <div id="history">
-        <div>
+        <div id="historyTimeline">
+            <p style="text-align: center; font-size:1.5em;margin-top: 10px;">Timeline</p>
             <div id="historyYears">
                 <a data-year="2018" onmouseover="hover(this)" onmouseleave="hover(this)" onclick="selectHistory(this)">2018</a>
                 <a data-year="2019" onmouseover="hover(this)" onmouseleave="hover(this)" onclick="selectHistory(this)">2019</a>
@@ -47,57 +48,272 @@
                 <div data-year="2023">2023</div>
             </div>
             <div id="historyEvents">
-                <div style="--tooltip-startYear:2018; --tooltip-endYear:2021; --tooltip-color:blue;">NYP (Diploma in Game Development and Technologies)</div>
-                <div style="--tooltip-startYear: 2020.5; --tooltip-endYear: 2020.9; --tooltip-color: gray;">Intern</div>
-                <div style="--tooltip-startYear: 2021; --tooltip-endYear: 2022.5; --tooltip-color: green;">NS</div>
-                <div style="--tooltip-startYear: 2022.5; --tooltip-endYear: 2022.9; --tooltip-color: gray;">Unity Developer</div>
-            </div>
-            <div id="historyEventsContent">
-                <div data-year="2022" class="historySelected">
-                    <h2>2022</h2>
-                    <h3>Unity Developer in Eon Reality</h3>
-                    <p>Used Unity to improve a VR/AR application.</p>
-                    <p class="lineBreak"></p>
-                    <h3>Graduated from NS</h3>
+                <div style="--tooltip-startYear: 2018; --tooltip-endYear: 2021; --tooltip-color: blue;"
+                     data-year="NYP" onmouseover="hover(this)" onmouseleave="hover(this)" onclick="selectHistory(this)">
+                    NYP (Diploma - Game Development and Technologies)
                 </div>
 
-                <div data-year="2021">
-                    <h2>2021</h2>
-                    <h3>Entered NS</h3>
-                    <p class="lineBreak"></p>
-                    <h3>Graduated from NYP with Diploma in Game Development and Technologies</h3>
+                <div style="--tooltip-startYear: 2020.6; --tooltip-endYear: 2020.9; --tooltip-color: gray;"
+                     data-year="NTUDSAIR" onmouseover="hover(this)" onmouseleave="hover(this)" onclick="selectHistory(this)">
+                    Intern @ NTU
                 </div>
 
-                <div data-year="2020">
-                    <h2>2020</h2>
-                    <h3>Still in NYP - Diploma in Game Development and Technologies</h3>
-                    <p class="lineBreak"></p>
-                    <h3>Internship at NTU@DSAIR as Unity Developer</h3>
-                    <p>Used Unity to improve the quality of Intelik's templates by adding more customization / optimization.</p>
+                <div style="--tooltip-startYear: 2021; --tooltip-endYear: 2022.5; --tooltip-color: green;"
+                     data-year="NS" onmouseover="hover(this)" onmouseleave="hover(this)" onclick="selectHistory(this)">
+                    NS
                 </div>
 
-                <div data-year="2019">
-                    <h2>2019</h2>
-                    <h3>Still in NYP - Diploma in Game Development and Technologies</h3>
+                <div style="--tooltip-startYear: 2022.6; --tooltip-endYear: 2022.9; --tooltip-color: gray;"
+                     data-year="Eon" onmouseover="hover(this)" onmouseleave="hover(this)" onclick="selectHistory(this)">
+                    Dev @ Eon
                 </div>
 
-                <div data-year="2018">
-                    <h2>2018</h2>
-                    <h3>Entered NYP - Diploma in Game Development and Technologies</h3>
-                </div>
             </div>
         </div>
-        <!--<div class="homeContent">
-            <h2>Education</h2>
-            <div class="lineBreak"></div>
-            <h3>Diploma in Game Development and Technologies @ NYP 2018 – 2021</h3>
-            <p>
-                C++, C#, OpenGL, Winsock, Playfab, Firebase, <br />
-                Computer Gaphics, Game Development Techniques, Programming Physics, Data Structure and Algorithms, 
-                Multiplayer Game Programming, AI in Games, Server Development for Social Games, 
-                Mobile Game Programming, Mixed Reality Experience Design, Web Development, Console Game Development
-            </p>
-        </div>-->
+
+        <div id="historyEventsContent">
+            <section data-year="2022" class="historySelected">
+                <h2>2022</h2>
+                <h3>Unity Developer in Eon Reality</h3>
+                <ul>
+                    <li>Tasked with using Unity to work on VR/AR applications.</li>
+                    <li>Built up fundemental skills of using AR Foundation, AR Core, and post-processing</li>
+                    <li>Developed mobile application for Android & IOS</li>
+                </ul>
+                <p class="lineBreak"></p>
+                <h3>Graduated from NS</h3>
+                <div class="subCategory">
+                    <h4>Personal Project - Abominable Cacti (Game Jam)</h4>
+                    <ul>
+                        <li>Took part in Wowie Jam 4.0 in a team of 5 - Using Unity</li>
+                        <li>Acheived Top 30%</li>
+                    </ul>
+                    <h4>Personal Project - Crab Arena 4 (Game Jam)</h4>
+                    <ul>
+                        <li>Took part in Mini Jam 108 in a team of 2 - Using Unity</li>
+                        <li>Acheived Top 10%</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-year="2021">
+                <h2>2021</h2>
+                <h3>Entered NS</h3>
+                <div class="subCategory">
+                    <h4>Personal Project - Password Manager</h4>
+                    <ul>
+                        <li>Worked on a personal password storage - developed in Unity</li>
+                        <li>Stores passwords and usernames in Firebase</li>
+                        <li>Utilizes different accounts and rules to allow multiple people to store their own passwords</li>
+                        <li>The passwords are hashed and salted as a security measure</li>
+                    </ul>
+                </div>
+                <p class="lineBreak"></p>
+                <h3>Graduated from NYP with Diploma in Game Development and Technologies</h3>
+                <div class="subCategory">
+                    <h4>Final Year Project - ComChest</h4>
+                    <ul>
+                        <li>Tasked to complete a Unity game for ComChest</li>
+                        <li>Worked as a Unity Programmer in a team of 5</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-year="2020">
+                <h2>2020</h2>
+                <h3>In NYP - Diploma in Game Development and Technologies</h3>
+                <div class="subCategory">
+                    <h4>Modules</h4>
+                    <ul>
+                        <li>Learnt Winsock, Playfab, Firebase for multiplayer games, and Server Development</li>
+                        <li>AI - State machines</li>
+                        <li>More optimization techniques for Rendering / Collision</li>
+                        <li>Learn how to develop console games (PS4)</li>
+                        <li>Learnt Lua, C#, Unity, Java, and Android Studio</li>
+                    </ul>
+                    <h4>Independent Work Project</h4>
+                    <ul>
+                        <li>Made a 3D game using Unity</li>
+                        <li>Made a Procedurally generated maze with adjustible complexity 
+                        (used a modified version of Hunt & Kill and Kruskal algorithm)</li>
+                        <li>Added Post-processing effects and Custom Shaders</li>
+                        <li>Data is saved in a .dat file</li>
+                    </ul>
+                    <h4>Studio Project 4</h4>
+                    <ul>
+                        <li>Worked in a team of 2, using Unity to make a First Person game in 2 weeks</li>
+                        <li>Used RakNet and Playfab to make Server-side collision</li>
+                        <ul class="subCategory">
+                            <li>The player inputs are stored as actions with timestamps that are then sent to the 
+                            server-side to calculate and be interpolated or rollbacked</li>
+                        </ul>
+                    </ul>
+                </div>
+                <p class="lineBreak"></p>
+                <h3>Internship at NTU@DSAIR as Unity Developer</h3>
+                <ul>
+                    <li>Tasked with improving the quality of Intelik - developed in Unity</li>
+                    <li>Added more player customization into the custom game editor</li>
+                    <li>Optimized the editor through implementing caching instead of re-downloading every time</li>
+                </ul>
+            </section>
+
+            <section data-year="2019">
+                <h2>2019</h2>
+                <h3>In NYP - Diploma in Game Development and Technologies</h3>
+                <div class="subCategory">
+                    <h4>Modules</h4>
+                    <ul>
+                        <li>Received the "Most Improved Student" award</li>
+                        <li>learnt OpenGL, Game Physics, Computer Graphics, Data Structures and Algorithms,
+                        and Game Development Techniques</li>
+                    </ul>
+                    <h4>Studio Project 3</h4>
+                    <ul>
+                        <li>Worked in a team of 3 using C++ and OpenGL to make a 2D Side-scroller in 2 weeks</li>
+                        <li>Map was Procedurally generated in chunks by reading from excel files</li>
+                        <li>Handled collision detection</li>
+                    </ul>
+                    <h4>Studio Project 2</h4>
+                    <ul>
+                        <li>Worked in a team of 4 using C++ and OpenGL to make a 3D Racing game in 2 weeks</li>
+                        <li>Loaded 3D Assets made in Maya</li>
+                        <li>Handled Camera & Player Movement</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-year="2018">
+                <h2>2018</h2>
+                <h3>Entered NYP - Diploma in Game Development and Technologies</h3>
+                <div class="subCategory">
+                    <h4>Modules</h4>
+                    <ul>
+                        <li>Learnt C++, HTML, CSS, JS as programming languages</li>
+                    </ul>
+                    <h4>Studio Project 1</h4>
+                    <ul>
+                        <li>Made a First Person Shooter entirely using only C++ in 2 weeks</li>
+                        <li>Figured out how to render walls and items in the Commmand Prompt while still keeping 60fps</li>
+                        <ul class="subCategory">
+                            <li>Since the movement was tile based, the wall height was calculated based on window height,
+                            distance from player, taking into account FOV, and coloured based on distance and object type</li>
+                            <li>Rendering of the background(not UI) was optimised to only be updated when the player moves / turns / when an object or enemy enters the FOV</li>
+                            <li>Objects were rendered front to back, to reduce render calls</li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-year="NYP">
+                <h2>NYP - Game Development and Technologies 2018 ~ 2021</h2>
+                <div class="subCategory">
+                    <h4>Modules</h4>
+                    <ul>
+                        <li>Programming Languages: C#, C++, HTML, CSS, JS, Lua, Java</li>
+                        <li>Software: Unity, Visual Studio, Firebase, Winsock, Playfab, Android Studio</li>
+                        <li>
+                            Techniques: AI, OpenGL, Game Physics, Computer Graphics, Data Structures and Algorithms,
+                            and Game Development Techniques
+                        </li>
+                        <li>Learn how to develop console games (PS4)</li>
+                        <li>Received the "Most Improved Student 2019S1" award</li>
+                    </ul>
+                    <h4>Final Year Project - ComChest</h4>
+                    <ul>
+                        <li>Tasked to complete a Unity game for ComChest</li>
+                        <li>Worked as a Unity Programmer in a team of 5</li>
+                    </ul>
+                    <h4>Independent Work Project</h4>
+                    <ul>
+                        <li>Made a 3D game using Unity</li>
+                        <li>
+                            Made a Procedurally generated maze with adjustible complexity
+                            (used a modified version of Hunt & Kill and Kruskal algorithm)
+                        </li>
+                        <li>Added Post-processing effects and Custom Shaders</li>
+                        <li>Data is saved in a .dat file</li>
+                    </ul>
+                    <h4>Studio Project 4</h4>
+                    <ul>
+                        <li>Worked in a team of 2, using Unity to make a First Person game in 2 weeks</li>
+                        <li>Used RakNet and Playfab to make Server-side collision</li>
+                        <ul class="subCategory">
+                            <li>
+                                The player inputs are stored as actions with timestamps that are then sent to the
+                                server-side to calculate and be interpolated or rollbacked
+                            </li>
+                        </ul>
+                    </ul>
+                    <h4>Studio Project 3</h4>
+                    <ul>
+                        <li>Worked in a team of 3 using C++ and OpenGL to make a 2D Side-scroller in 2 weeks</li>
+                        <li>Map was Procedurally generated in chunks by reading from excel files</li>
+                        <li>Handled collision detection</li>
+                    </ul>
+                    <h4>Studio Project 2</h4>
+                    <ul>
+                        <li>Worked in a team of 4 using C++ and OpenGL to make a 3D Racing game in 2 weeks</li>
+                        <li>Loaded 3D Assets made in Maya</li>
+                        <li>Handled Camera & Player Movement</li>
+                    </ul>
+                    <h4>Studio Project 1</h4>
+                    <ul>
+                        <li>Made a First Person Shooter entirely using only C++ in 2 weeks</li>
+                        <li>Figured out how to render walls and items in the Commmand Prompt while still keeping 60fps</li>
+                        <ul class="subCategory">
+                            <li>
+                                Since the movement was tile based, the wall height was calculated based on window height,
+                                distance from player, taking into account FOV, and coloured based on distance and object type
+                            </li>
+                            <li>Rendering of the background(not UI) was optimised to only be updated when the player moves / turns / when an object or enemy enters the FOV</li>
+                            <li>Objects were rendered front to back, to reduce render calls</li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-year="NTUDSAIR">
+                <h2>Internship @ NTU @ DSAIR 2020</h2>
+                <ul>
+                    <li>Tasked with improving the quality of Intelik - developed in Unity</li>
+                    <li>Added more player customization into the custom game editor</li>
+                    <li>Optimized the editor through implementing caching instead of re-downloading every time</li>
+                </ul>
+            </section>
+
+            <section data-year="NS">
+                <h2>NS 2021 ~ 2022</h2>
+                <div class="subCategory">
+                    <h3>Personal Project - Abominable Cacti (Game Jam)</h3>
+                    <ul>
+                        <li>Took part in Wowie Jam 4.0 in a team of 5 - Using Unity</li>
+                        <li>Acheived Top 30%</li>
+                    </ul>
+                    <h3>Personal Project - Crab Arena 4 (Game Jam)</h3>
+                    <ul>
+                        <li>Took part in Mini Jam 108 in a team of 2 - Using Unity</li>
+                        <li>Acheived Top 10%</li>
+                    </ul>
+                    <h3>Personal Project - Password Manager</h3>
+                    <ul>
+                        <li>Worked on a personal password storage - developed in Unity</li>
+                        <li>Stores passwords and usernames in Firebase</li>
+                        <li>Utilizes different accounts and rules to allow multiple people to store their own passwords</li>
+                        <li>The passwords are hashed and salted as a security measure</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-year="Eon">
+                <h2>Unity Developer @ Eon Reality 2022</h2>
+                <ul>
+                    <li>Tasked with using Unity to work on VR/AR applications.</li>
+                    <li>Built up fundemental skills of using AR Foundation, AR Core, and post-processing</li>
+                    <li>Developed mobile application for Android & IOS</li>
+                </ul>
+            </section>
+        </div>
     </div>
 
     <script src="MainJS.js"></script>
