@@ -258,8 +258,8 @@ body {
     user-select: none;
     -webkit-user-select: none;
 
-    margin-left: calc((var(--tooltip-startYear) - 2018 + 0.5) * 100% / 6);
-    width: calc((var(--tooltip-endYear) - var(--tooltip-startYear)) * 100% / 6);
+    margin-left: calc((var(--tooltip-startYear) - 2018 + 0.5) * 100% / 7);
+    width: calc((var(--tooltip-endYear) - var(--tooltip-startYear)) * 100% / 7);
     white-space: nowrap;
     height: 30px;
 }
